@@ -1,0 +1,35 @@
+body{
+    background-color: rgb(202, 243, 229);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+main{
+    background-color: rgb(203, 240, 167);
+    width:90vw;
+    height: 90vh;
+    border: 1px solid rgb(12, 62, 12);
+    display: grid;
+    grid-template-rows: repeat(90, 1fr);
+    grid-template-columns: repeat(90, 1fr);
+}
+
+.snake{
+    background-color: blueviolet;
+    animation: animate-snake-head 500ms ease-in infinite;
+}
+
+@keyframes animate-snake-head {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 0.9;
+    }
+}
