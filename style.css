@@ -8,7 +8,7 @@ body{
 }
 
 main{
-    background-color: rgb(203, 240, 167);
+    background: linear-gradient(rgb(206, 249, 172), rgb(113, 241, 145));
     width:90vw;
     height: 90vh;
     border: 1px solid rgb(12, 62, 12);
@@ -17,9 +17,50 @@ main{
     grid-template-columns: repeat(90, 1fr);
 }
 
+.food{
+    background-color: rgb(248, 5, 199);
+    border:2px solid rgb(5, 48, 241);
+    border-radius: 50%;
+    animation: animate-snake-head 400ms linear infinite;
+}
+
 .snake{
-    background-color: blueviolet;
+    background-color: rgb(0, 166, 255);
+    border-radius: 20%;
+    border: 1px solid black;
+    margin: 0 0.3px;
     animation: animate-snake-head 500ms ease-in infinite;
+}
+
+.snake-head{
+    background-color: rgb(11, 11, 116);
+    animation: animate-snake-head 500ms ease-in infinite;
+    transition: 500ms ease-in;
+}
+
+.snake-head-rotate{
+    transform: rotate(90deg);
+}
+
+.snake-head-right{
+    border-right: 4px solid rgb(250, 3, 3);
+    border-top-right-radius: 40%;
+    border-bottom-right-radius: 40%;
+}
+.snake-head-left{
+    border-left: 4px solid rgb(250, 3, 3);
+    border-top-left-radius: 40%;
+    border-bottom-left-radius: 40%;
+}
+.snake-head-down{
+    border-bottom: 4px solid rgb(250, 3, 3);
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 40%;
+}
+.snake-head-up{
+    border-top: 4px solid rgb(250, 3, 3);
+    border-top-left-radius: 40%;
+    border-top-right-radius: 40%;
 }
 
 @keyframes animate-snake-head {
